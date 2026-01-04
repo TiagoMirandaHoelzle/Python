@@ -2,7 +2,7 @@
 import requests
 
 #Informações da API
-api_key = "f33e35b2762492a05cabd2f89a04851f" 
+api_key = "Sua Chave da API" 
 units = "metric"
 lang = "pt_br"
 
@@ -13,13 +13,13 @@ def getCityName(city):
     # 200 é o status de sucesso na comunicação HTTP
     if response.status_code == 200:
         data = response.json()
-
+        
         # Retorna os dados da API em formato JSON
         return data
     else:
         print(f"Falha na requisição: {response.status_code}")    
 
-# Recebe o nome da cidade a ser consultada(
+# Recebe o nome da cidade a ser consultada
 cityName = str(input("Digite o nome de uma cidade: ")).strip().capitalize()
 
 # Armazena os dados retornados da função em uma variavel
