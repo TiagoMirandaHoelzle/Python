@@ -5,7 +5,7 @@ try:
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Hoelzle338*",
+        password="",
         database="crud_simples",
         port=3306
     )
@@ -18,4 +18,5 @@ except mysql.connector.Error as error:
     print(f"Falha na conexão: {error}")
 
 # Criando um objeto cursor para executar os comandos SQL
+
 cursor = conn.cursor()
