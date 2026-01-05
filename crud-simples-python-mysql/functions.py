@@ -1,5 +1,6 @@
 from connection import *
 
+# Função responsavel pelo cadastro de produtos
 def create():
 
     # Informações que serão armezandas na tabela produtos
@@ -20,6 +21,7 @@ def create():
     #commit() para salvar as alterações no banco de dados.
     conn.commit()
 
+# Função responsavel pela listagem dos produtos
 def read():
     sql = "SELECT * FROM Produtos;"
     cursor.execute(sql)
@@ -35,6 +37,7 @@ def read():
     for row in result:
         print(f"({row[0]}, {row[1]}, {row[2]}, $ {row[3]}, {row[4]} %, $ {row[5]}, $ {row[6]}, {row[7]} Unidades)")
 
+# Função responsavel pela atualização dos dados dos produtos
 def update():
     id_produto = int(input("Digite o ID do produto que deseja alterar: "))
 
@@ -51,10 +54,12 @@ def update():
     cursor.execute(sql, values)
     conn.commit()
 
+# Função responsavel pela exclusão dos produtos
 def delete():
     id_produto = int(input("Digite o ID do produto que deseja excluir: "))
 
     sql = f"DELETE FROM Produtos WHERE id_produto = %s"
 
     cursor.execute(sql, (id_produto, ))
+
     conn.commit()
