@@ -12,7 +12,3 @@ CREATE TABLE Produtos(
     preco_final_produto DECIMAL(10,2) GENERATED ALWAYS AS (preco_produto - valor_desconto) STORED,
     estoque_produto INT NOT NULL DEFAULT (1)
 );
-
-SELECT * FROM Produtos;
-
-UPDATE Produtos SET nome_produto = "Camisa Nike", preco_produto = 190.00, desconto_produto = 0  WHERE id_produto = 1;
