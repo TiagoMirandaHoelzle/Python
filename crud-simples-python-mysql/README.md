@@ -11,3 +11,4 @@ Pequeno projeto de um sistema CRUD em terminal para gerenciamento de produtos.
 ## Tecnologias
 - Python
 - MySQL
+- mysql-connector-python
