@@ -1,6 +1,6 @@
 # Consumo de uma API de clima com Python
 
-Pequeno projeto responsavel por consumir uma API de clima
+Pequeno projeto responsavel por consumir uma API de clima utllizando linguagem Python
 
 ## Proposta 
 
